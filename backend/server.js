@@ -7,7 +7,6 @@ const { Server } = require("socket.io");
 
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/auth");
-const adminRoutes = require("./routes/admin");
 const therapistRoutes = require("./routes/therapist");
 const chatRoutes = require("./routes/chat");
 const userRoutes = require("./routes/users");
@@ -23,8 +22,6 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-// app.use("/api/admin", adminRoutes);
-// app.use("/api/therapists", therapistRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/resources", resourcesRoute);
 app.use("/api/mood", moodRoutes);
